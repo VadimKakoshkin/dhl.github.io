@@ -1,0 +1,310 @@
+/*Normalize*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1900px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*Header*/
+.header__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ba0000;
+    padding: 15px 375px;
+}
+
+.header__user a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__contact {
+    padding-left: 400px;
+}
+
+.select {
+    background-color: #ba0000;
+    color: white;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.header__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffcc00;
+    padding: 0 375px;
+}
+
+.header__nav {
+    padding: 55px 0;
+}
+
+.header__nav-item {
+    padding: 0 10px;
+    color: #ba0000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.header__search {
+    padding: 25px;
+    border-radius: 50%;
+    background-color: #ba0000;
+    box-shadow: 0 0 20px rgba(186, 0, 0, 0.8);
+}
+
+/*Hero*/
+.hero {
+    position: relative;
+    background: #ba0000 url(../img/hero_bg.png) no-repeat center / cover;
+    z-index: 5;
+}
+
+.hero__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: url(../img/hero_gradient.png) no-repeat center / cover;
+    padding: 150px 375px;
+}
+
+.hero__title {
+    font-size: 56px;
+    line-height: 56px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.line {
+    width: 100px;
+    height: 4px;
+    background-color: #ffcc00;
+}
+
+.hero__description {
+    padding: 20px 0;
+    color: #ffcc00;
+}
+
+.hero__advantages-item {
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+
+.hero__advantages-item::after {
+    margin-left: 28px;
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: #ffcc00;
+    color: #ffcc00;
+}
+
+.hero__buttons {
+    padding-top: 20px;
+}
+
+/*Buttons*/
+.button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.button--primary {
+    background-color: #ffcc00;
+    color: #ba0000;
+    border: 0;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);;
+}
+
+.button--secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    margin-left: 20px;
+}
+
+.button--select {
+    background-color: #ffcc00;
+    padding: 32px;
+    border: 0;
+    border-radius: 0;
+    margin-top: -10px;
+}
+
+.button--play {
+    padding: 35px;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
+    border: 0;
+}
+
+/*Services*/
+.services__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 140px 375px;
+}
+
+.services__title {
+    font-size: 56px;
+    color: #ba0000;
+    z-index: 1;
+}
+
+.services__title-bg {
+    font-size: 144px;
+    color: #f8f8f8;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: -146px;
+    z-index: 0;
+}
+
+.services__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.services__item {
+    max-width: 250px;
+    width: 100%;
+    padding-right: 30px;
+}
+
+.services__item__heading {
+    color: #ba0000;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.services__item__description {
+    font-weight: 100;
+    margin-bottom: 25px;
+    color: #777777;
+}
+
+.services__item__more {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+.services__item__location {
+    background-color: #ba0000;
+    padding: 32px;
+}
+
+.services__item__location__heading {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.services__item__location__description {
+    font-size: 14px;
+    color: white;
+    margin: 30px 0;
+}
+
+.services__item__location__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services__item__location__select {
+    background-color: #9d0000;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-right: 70px;
+}
+
+/*About Us*/
+.about-us {
+    position: relative;
+    background: #ffcc00 url(../img/video-preview.png) no-repeat center / cover;
+    z-index: 5;
+}
+
+.about-us__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/video-gradient.png) no-repeat center / cover;
+    padding: 150px 375px;
+}
+
+.about-us__title {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 64px;
+}
+
+.about-us__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 178px;
+}
+
+.about-us__item {
+    max-width: 370px;
+    width: 100%;
+    margin-right: 30px;
+    background-color: white;
+    margin-bottom: -384px;
+    box-shadow: rgba(0, 0, 0, 0.8);
+}
+
+.about-us__item__heading {
+    margin: 32px;
+    color: #ba0000;
+}
+
+.about-us__item__list {
+    padding-left: 50px;
+    margin-bottom: 34px;
+}
+
+.about-us__item__list-item {
+    content: '';
+    color: #777777;
+}
+
+/*Express and Logistics*/
+.eal__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 375px;
+    padding-top: 310px;
+    padding-bottom: 100px;
+    background-color: white;
+}
