@@ -44,7 +44,7 @@
                 <!-- /.header__nav -->
 
                 <div class="header__search">
-
+                    
                 </div>
                 <!-- /.header__search -->
             </div>
@@ -200,19 +200,83 @@
 
                 <div class="eal__table">
 
-                    <div class="eal__express">
-                        <input type="text" class="input eal__input">
-                        <input type="text" class="input eal__input">
-                        <input type="text" class="input eal__input">
-                        <input type="text" class="input eal__input">
+                    <div class="eal__tabs">
+                        <div class="eal__express-tab eal__tab tab-active">Express</div>
+                        <div class="eal__logistics-tab eal__tab tab-inactive">Logistics</div>
+                    </div>
+                    <!-- /.eal__tabs -->
+                    
+                    <div class="eal__express active">
+
+                        <div class="eal__select__block">
+                            <select class="select eal__select">
+                                <option value="shipment">Track your shipment</option>
+                            </select>
+                            <button class="eal__button--select"></button>
+                        </div>
+                        <!-- /.eal__select__block -->
+                        
+                        <div class="eal__select__block">
+                            <select class="select eal__select">
+                                <option value="login">New login</option>
+                            </select>
+                            <button class="eal__button--select"></button>
+                        </div>
+                        <!-- /.eal__select__block -->
+
+                        <div class="eal__select__block">
+                            <select class="select eal__select">
+                                <option value="dhl-point">Find DHL point</option>
+                            </select>
+                            <button class="eal__button--select"></button>
+                        </div>
+                        <!-- /.eal__select__block -->
+
+                        <div class="eal__select__block">
+                            <select class="select eal__select">
+                                <option value="service">Find a service</option>
+                            </select>
+                            <button class="eal__button--select"></button>
+                        </div>
+                        <!-- /.eal__select__block -->
+                        
                     </div>
                     <!-- /.eal__express -->
 
-                    <div class="eal__logistics">
-                        <input type="text" class="input eal__input">
-                        <input type="text" class="input eal__input">
-                        <input type="text" class="input eal__input">
-                        <input type="text" class="input eal__input">
+                    <div class="eal__logistics inactive">
+
+                        <div class="eal__select__block">
+                            <select class="select eal__select">
+                                <option value="shipment">Track your shipment</option>
+                            </select>
+                            <button class="eal__button--select"></button>
+                        </div>
+                        <!-- /.eal__select__block -->
+                        
+                        <div class="eal__select__block">
+                            <select class="select eal__select">
+                                <option value="login">New login</option>
+                            </select>
+                            <button class="eal__button--select"></button>
+                        </div>
+                        <!-- /.eal__select__block -->
+
+                        <div class="eal__select__block">
+                            <select class="select eal__select">
+                                <option value="dhl-point">Find DHL point</option>
+                            </select>
+                            <button class="eal__button--select"></button>
+                        </div>
+                        <!-- /.eal__select__block -->
+
+                        <div class="eal__select__block">
+                            <select class="select eal__select">
+                                <option value="service">Find a service</option>
+                            </select>
+                            <button class="eal__button--select"></button>
+                        </div>
+                        <!-- /.eal__select__block -->
+
                     </div>
                     <!-- /.eal__logistics -->
 
@@ -220,7 +284,13 @@
                 <!-- /.eal__table -->
 
                 <div class="eal__image">
-
+                    <div class="eal__image-pic">
+                        <img src="img/eal/eal-image.png" alt="Image" class="eal__image-img">
+                        <img src="img/eal/eal-gradient.png" alt="Gradient" class="eal__image-gradient">
+                        <img src="img/logo.png" alt="Logo" class="eal__image-logo">
+                    </div>
+                    <!-- /.eal__image-pic -->
+                    
                 </div>
                 <!-- /.eal__image -->
 
@@ -235,11 +305,11 @@
         <div class="container">
             <div class="features__block">
                 <div class="features__info">
-                    <h2 class="features__title"></h2>
-                    <p class="features__description"></p>
+                    <h2 class="features__title">Excellence. Simply delivered.</h2>
+                    <p class="features__description">International express deliveries; global freight forwarding by air, sea, road and rail; warehousing solutions from packaging, to repaira, to storage; mail deliveries worldwide; and other customized logistics services — with everything DHL does, we<br> help connect people and improve their lives.</p>
                 </div>
                 <!-- /.features__info -->
-                <button class="button button--tertiary"></button>
+                <button class="button button--tertiary">Learn more</button>
             </div>
             <!-- /.features__block -->
         </div>
@@ -251,22 +321,10 @@
         <div class="container">
             <div class="client__block">
 
-                <div class="client__button">
-
-                </div>
-                <!-- /.client__button -->
-                <div class="client__button">
-
-                </div>
-                <!-- /.client__button -->
-                <div class="client__button">
-
-                </div>
-                <!-- /.client__button -->
-                <div class="client__button">
-
-                </div>
-                <!-- /.client__button -->
+                <div class="client__button client__themeforest"></div>
+                <div class="client__button client__photodune"></div>
+                <div class="client__button client__graphicriver"></div>
+                <div class="client__button client__codecanyon"></div>
 
             </div>
             <!-- /.client__block -->
@@ -280,39 +338,39 @@
             <div class="footer__block">
                 
                 <div class="footer__contact">
-                    <h3 class="footer__contact-title"></h3>
+                    <h3 class="footer__title">Contact Center</h3>
                     <ul class="footer__contact-list">
-                        <li class="footer__contact-item"></li>
-                        <li class="footer__contact-item"></li>
-                        <li class="footer__contact-item"></li>
-                        <li class="footer__contact-item"></li>
-                        <li class="footer__contact-item"></li>
+                        <li class="footer__item footer__contact-item">DHL Express</li>
+                        <li class="footer__item footer__contact-item">DHL Parcel & Ecommerce</li>
+                        <li class="footer__item footer__contact-item">DHL Global Forwarding</li>
+                        <li class="footer__item footer__contact-item">DHL Freight</li>
+                        <li class="footer__item footer__contact-item">DHL Supply Chain</li>
                     </ul>
                     <!-- /.footer__contact-list -->
                 </div>
                 <!-- /.footer__contact -->
 
                 <div class="footer__about-us">
-                    <h3 class="footer__about-us-title"></h3>
+                    <h3 class="footer__title">About Us</h3>
                     <ul class="footer__about-us-list">
-                        <li class="footer__about-us-item"></li>
-                        <li class="footer__about-us-item"></li>
-                        <li class="footer__about-us-item"></li>
-                        <li class="footer__about-us-item"></li>
-                        <li class="footer__about-us-item"></li>
+                        <li class="footer__item footer__about-us-item">Partnerships</li>
+                        <li class="footer__item footer__about-us-item">Company Portrait</li>
+                        <li class="footer__item footer__about-us-item">DHL Global Forwarding</li>
+                        <li class="footer__item footer__about-us-item">Green Solutions</li>
+                        <li class="footer__item footer__about-us-item">Innovation</li>
                     </ul>
                     <!-- /.footer__about-us-list -->
                 </div>
                 <!-- /.footer__about-us -->
 
                 <div class="footer__social">
-                    <h3 class="footer__social-title"></h3>
+                    <h3 class="footer__title">Social Media</h3>
                     <ul class="footer__social-list">
-                        <li class="footer__social-item"></li>
-                        <li class="footer__social-item"></li>
-                        <li class="footer__social-item"></li>
-                        <li class="footer__social-item"></li>
-                        <li class="footer__social-item"></li>
+                        <li class="footer__item footer__social-item">Facebook</li>
+                        <li class="footer__item footer__social-item">Dribble</li>
+                        <li class="footer__item footer__social-item">Behance</li>
+                        <li class="footer__item footer__social-item">Gmail</li>
+                        <li class="footer__item footer__social-item">Twitter</li>
                     </ul>
                     <!-- /.footer__social-list -->
                 </div>
