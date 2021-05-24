@@ -14,6 +14,10 @@ body {
     box-sizing: border-box;
 }
 
+select {
+    appearance: none;
+}
+
 /*Header*/
 .header__user {
     display: flex;
@@ -53,17 +57,23 @@ body {
 }
 
 .header__nav-item {
-    padding: 0 10px;
+    padding: 55px 20px;
     color: #ba0000;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 12px;
 }
 
+.header__nav-item:hover {
+    font-weight: 700;
+    border-bottom: 5px solid #ba0000;
+}
+
 .header__search {
     padding: 25px;
     border-radius: 50%;
-    background-color: #ba0000;
+    background: #ba0000 url(../img/search.svg) no-repeat center;
+    background-size: 25px;
     box-shadow: 0 0 20px rgba(186, 0, 0, 0.8);
 }
 
@@ -85,6 +95,7 @@ body {
 .hero__title {
     font-size: 56px;
     line-height: 56px;
+    letter-spacing: 2px;
     color: white;
     padding-bottom: 20px;
 }
@@ -110,9 +121,11 @@ body {
 
 .hero__advantages-item::after {
     margin-left: 28px;
-    content: '';
+    content: '.';
     width: 4px;
-    height: 4px;
+    max-height: 4px;
+    height: 100%;
+    border-radius: 20px;
     background-color: #ffcc00;
     color: #ffcc00;
 }
@@ -153,7 +166,8 @@ body {
 }
 
 .button--select {
-    background-color: #ffcc00;
+    background: #ffcc00 url(../img/arrow-down.svg) no-repeat center;
+    background-size: 20px;
     padding: 32px;
     border: 0;
     border-radius: 0;
@@ -163,7 +177,8 @@ body {
 .button--play {
     padding: 35px;
     border-radius: 50%;
-    background-color: #ffcc00;
+    background: #ffcc00 url(../img/button-play.svg) no-repeat center;
+    background-size: 20px;
     box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
     border: 0;
 }
@@ -241,7 +256,7 @@ body {
 .services__item__location__block {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .services__item__location__select {
@@ -389,8 +404,9 @@ body {
 }
 
 .eal__button--select {
-    background-color: transparent;
-    padding: 30.5px;
+    background: transparent url(../img/arrow-down-white.svg) no-repeat center;
+    background-size: 20px;
+    padding: 31px;
     border: 2px solid white;
     border-left: 0;
     border-radius: 0;
