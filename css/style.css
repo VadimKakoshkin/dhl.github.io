@@ -8,13 +8,17 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+ul {
+    list-style: none;
+}
+
 .container {
     max-width: 1900px;
     width: 100%;
     box-sizing: border-box;
 }
 
-select {
+.select__item {
     appearance: none;
 }
 
@@ -34,6 +38,12 @@ select {
 
 .header__contact {
     padding-left: 400px;
+}
+
+.header__contact:before {
+    margin-right: 7px;
+    content: '..........';
+    background: url(../img/group.svg) no-repeat center / cover;
 }
 
 .select {
@@ -111,6 +121,12 @@ select {
     color: #ffcc00;
 }
 
+.hero__advantages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .hero__advantages-item {
     font-style: normal;
     font-weight: 700;
@@ -119,14 +135,9 @@ select {
     margin-right: 30px;
 }
 
-.hero__advantages-item::after {
+.hero__advantages-item:not(:last-child):after {
     margin-left: 28px;
     content: '.';
-    width: 4px;
-    max-height: 4px;
-    height: 100%;
-    border-radius: 20px;
-    background-color: #ffcc00;
     color: #ffcc00;
 }
 
@@ -144,25 +155,38 @@ select {
     text-transform: uppercase;
 }
 
-.button--primary {
-    background-color: #ffcc00;
-    color: #ba0000;
-    border: 0;
-    box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);;
+.button:hover {
+    cursor: pointer;
 }
 
-.button--secondary {
+.button--primary {
     background: transparent;
     color: white;
     border: 2px solid white;
+}
+
+.button--primary:hover {
+    background-color: #ffcc00;
+    color: #ba0000;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
+}
+
+.button--primary:nth-child(2) {
     margin-left: 20px;
 }
 
-.button--tertiary {
+.button--secondary {
     border: 0;
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
     letter-spacing: 2px;
+}
+
+.button--secondary:hover {
+    background-color: #ffcc00;
+    color: #ba0000;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
 }
 
 .button--select {
@@ -172,6 +196,10 @@ select {
     border: 0;
     border-radius: 0;
     margin-top: -10px;
+}
+
+.button--select:hover {
+    cursor: pointer;
 }
 
 .button--play {
@@ -237,6 +265,20 @@ select {
     font-weight: 700;
 }
 
+.services__item__more::after {
+    content: '>';
+    color: #ba0000;
+    margin-left: 7px;
+    max-width: 20px;
+    width: 100%;
+    background: url(../img/point.svg) no-repeat center;
+    background-size: 21px;
+}
+
+.services__item__more:hover {
+    color: #ba0000;
+}
+
 .services__item__location {
     background-color: #ba0000;
     padding: 32px;
@@ -266,6 +308,10 @@ select {
     margin-bottom: 20px;
     padding: 20px;
     padding-right: 70px;
+}
+
+.services__item__location__select:hover {
+    cursor: pointer;
 }
 
 /*About Us*/
@@ -320,6 +366,13 @@ select {
     color: #777777;
 }
 
+.about-us__item__list-item:before {
+    margin-right: 7px;
+    background: url(../img/point-green.svg) no-repeat center / cover;
+    content: '>';
+    color: #ffcc00;
+}
+
 /*Express and Logistics*/
 .eal__block {
     display: flex;
@@ -367,6 +420,9 @@ select {
 .tab-inactive {
     background-color: #ffcc00;
     color: #000;
+}
+
+.tab-inactive:hover {
     box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
 }
 
@@ -403,13 +459,24 @@ select {
     width: 100%;
 }
 
+.eal__select:hover {
+    cursor: pointer;
+}
+
 .eal__button--select {
     background: transparent url(../img/arrow-down-white.svg) no-repeat center;
     background-size: 20px;
-    padding: 31px;
+    padding: 30px;
     border: 2px solid white;
     border-left: 0;
     border-radius: 0;
+}
+
+.eal__button--select:hover {
+    cursor: pointer;
+    background: #ffcc00 url(../img/arrow-down.svg) no-repeat center;
+    background-size: 20px;
+    border: 2px solid #ba0000;
 }
 
 .eal__image {
@@ -483,6 +550,7 @@ select {
 
 .client__button:hover {
     border: 2px solid #ba0000;
+    cursor: pointer;
 }
 
 .client__themeforest {
@@ -509,6 +577,7 @@ select {
     padding: 60px 375px;
     text-transform: uppercase;
     font-weight: 700;
+    letter-spacing: 1px;
     background: url(../img/footer-left-bg.png) no-repeat left, url(../img/footer-right-bg.png) no-repeat right;
 }
 
@@ -517,8 +586,17 @@ select {
     color: #ba0000;
 }
 
-.footer__item {
+.footer__item a {
     color: #777777;
+    text-decoration: none;
+}
+
+.footer__item:before {
+    margin-right: 8px;
+    content: '>';
+    color: #ba0000;
+    font-size: 14px;
+    background: url(../img/point.svg) no-repeat center / cover;
 }
 
 .footer__contact {
@@ -541,3 +619,446 @@ select {
     color: #45a0e8;
 }
 
+/*Media*/
+@media (max-width: 1540px) {
+    .container {
+        max-width: 1540px;
+    }
+
+    .header__block, .eal__block {
+        padding: 0 200px;
+    }
+
+    .header__user {
+        padding: 15px 200px;
+    }
+
+    .hero__block, .about-us__block {
+        padding: 150px 200px;
+    }
+
+    .services__block {
+        padding: 140px 200px;
+    }
+
+    .about-us__title {
+        font-size: 38px;
+    }
+
+    .eal__block {
+        padding-top: 310px;
+        padding-bottom: 100px;
+    }
+
+    .eal__image-pic {
+        margin-left: -10px;
+    }
+
+    .features__block {
+        padding: 100px 200px;
+    }
+
+    .client__block {
+        padding: 70px 200px;
+    }
+
+    .footer__block {
+        padding: 60px 200px;
+        padding-left: 300px;
+    }
+
+    .footer__title {
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    .footer__item {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1345px) {
+    .container {
+        max-width: 1345px;
+    }
+
+    .header__block, .eal__block {
+        padding: 0 60px;
+    }
+
+    .header__user {
+        padding: 15px 60px;
+    }
+
+    .hero__block, .about-us__block {
+        padding: 150px 60px;
+    }
+
+    .services__block {
+        padding: 140px 60px;
+    }
+
+    .services__item {
+        margin-right: 80px;
+        max-width: 180px;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .services__item__heading {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    
+    .services__item__description {
+        font-size: 14px;
+    }
+    
+    .services__item__location {
+        padding: 27px;
+    }
+    
+    .services__item__location__heading {
+        margin-bottom: 25px;
+    }
+    
+    .services__item__location__description {
+        margin: 25px 0;
+    }
+    
+    .services__item__location__select {
+        margin-bottom: 20px;
+        padding: 20px;
+        padding-right: 30px;
+    }
+
+    .about-us__title {
+        font-size: 38px;
+    }
+
+    .about-us__item {
+        max-width: 320px;
+        width: 100%;
+        margin-right: 35px;
+        margin-bottom: -368px;
+    }
+
+    .about-us__item__image {
+        max-width: 320px;
+        width: 100%;
+    }
+    
+    .about-us__item__heading {
+        margin: 32px;
+    }
+    
+    .about-us__item__list {
+        padding-left: 50px;
+        margin-bottom: 34px;
+    }
+
+    .about-us__item__list-item {
+        font-size: 14px;
+    }
+
+    .eal__block {
+        padding-top: 310px;
+        padding-bottom: 100px;
+    }
+
+    .eal__image-pic {
+        margin-left: 25px;
+    }
+
+    .features__block {
+        padding: 50px 60px;
+    }
+
+    .features__title {
+        margin-bottom: 30px;
+    }
+
+    .client__block {
+        padding: 70px 60px;
+    }
+
+    .client__button {
+        max-width: 240px;
+        width: 100%;
+        height: 125px;
+    }
+
+    .footer__block {
+        padding: 60px 180px;
+        padding-left: 300px;
+    }
+
+    .footer__title {
+        margin-bottom: 25px;
+        font-size: 16px;
+    }
+
+    .footer__item {
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 1230px) {
+    .container {
+        max-width: 1230px;
+    }
+
+    .header__block, .eal__block {
+        padding: 0 40px;
+    }
+
+    .header__user {
+        padding: 15px 40px;
+    }
+
+    .hero__block, .about-us__block {
+        padding: 150px 40px;
+    }
+
+    .services__block {
+        padding: 140px 40px;
+    }
+
+    .services__item {
+        margin-right: 20px;
+        max-width: 160px;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .services__item__image {
+        max-width: 160px;
+        width: 100%;
+    }
+
+    .services__item__heading {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    
+    .services__item__description {
+        font-size: 12px;
+    }
+    
+    .services__item__location {
+        padding: 23px;
+    }
+    
+    .services__item__location__heading {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    
+    .services__item__location__description {
+        margin: 15px 0;
+        font-size: 12px;
+    }
+    
+    .services__item__location__select {
+        margin-bottom: 15px;
+        padding: 17px;
+        padding-right: 30px;
+    }
+
+    .button--select {
+        padding: 28px;
+    }
+
+    .about-us__item {
+        max-width: 280px;
+        width: 100%;
+        margin-right: 30px;
+        margin-bottom: -350px;
+    }
+
+    .about-us__item__image {
+        max-width: 280px;
+        width: 100%;
+    }
+    
+    .about-us__item__heading {
+        margin: 27px;
+    }
+    
+    .about-us__item__list {
+        padding-left: 50px;
+        margin-bottom: 34px;
+    }
+
+    .about-us__item__list-item {
+        font-size: 12px;
+    }
+
+    .eal__block {
+        padding-top: 310px;
+        padding-bottom: 100px;
+    }
+
+    .eal__express-tab, .eal__logistics-tab {
+        width: 50%;
+        padding: 20px 72px;
+    }
+    
+    .eal__express, .eal__logistics {
+        padding: 30px;
+        width: 100%;
+    }
+    
+    .eal__select__block {
+        max-width: 335px;
+        width: 100%;
+    }
+    
+    .eal__select__block:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    
+    .eal__select {
+        max-width: 335px;
+        width: 100%;
+    }
+
+    .eal__image {
+        max-width: 400px;
+        width: 100%;
+        background: url(../img/eal/eal-frame.png) no-repeat;
+        margin-top: 58px;
+        margin-left: -200px;
+    }
+    
+    .eal__image-pic {
+        max-width: 400px;
+        width: 100%;
+        margin-top: 35px;
+        margin-left: 35px;
+    }
+
+    .eal__image-pic img {
+        max-width: 400px;
+    }
+
+    .eal__image-gradient {
+        margin-left: -400px;
+    }
+    
+    .eal__image-logo {
+        margin-top: 400px;
+        margin-left: -400px;
+    }
+
+    .features__block {
+        padding: 50px 40px;
+    }
+
+    .client__block {
+        padding: 60px 40px;
+    }
+
+    .client__button {
+        max-width: 210px;
+        width: 100%;
+        height: 125px;
+    }
+    
+    .client__themeforest, .client__photodune, .client__graphicriver, .client__codecanyon {
+        background-size: 200px;
+    }
+
+    .footer__block {
+        padding: 60px 100px;
+        background: rgba(0, 0, 0, 0.01);
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 991px;
+    }
+
+    .header__contact {
+        padding-left: 300px;
+    }
+    
+    .header__contact:before {
+        content: '';
+        background: 0;
+    }
+
+    .hero__block, .about-us__block {
+        padding: 70px 40px;
+    }
+
+    .about-us__title {
+        font-size: 28px;
+    }
+
+    .about-us__item {
+        margin-bottom: -232px;
+    }
+
+    .about-us__item__image {
+        max-width: 280px;
+        width: 100%;
+    }
+    
+    .about-us__item__heading {
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    .eal__block {
+        padding-top: 200px;
+        padding-bottom: 40px;
+    }
+
+    .eal__table {
+        margin-left: 38%;
+    }
+
+    .eal__image {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .features__block {
+        padding: 40px 40px;
+    }
+
+    .features__info {
+        max-width: 400px;
+        width: 100%;
+    }
+    
+    .features__title {
+        margin-bottom: 40px;
+        font-size: 21px;
+        text-transform: uppercase;
+    }
+
+    .client__block {
+        padding: 60px 40px;
+    }
+
+    .client__button {
+        max-width: 160px;
+        width: 100%;
+        height: 100px;
+    }
+    
+    .client__themeforest, .client__photodune, .client__graphicriver, .client__codecanyon {
+        background-size: 140px;
+    }
+
+    .footer__block {
+        padding: 60px 10px;
+    }
+}
